@@ -1,0 +1,12 @@
+{%  extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<p>YOU HAVE CHOOSEN TO DELETE {{order}} ORDER. ARE YOU SURE TO PROCEED?</p>
+	<a class="btn btn-warning" href="{% url 'home' %}">CANCEL</a>
+	<input class="btn btn-sm btn-danger" type="submit" name="DELETE">
+</form>
+{% endblock%}
